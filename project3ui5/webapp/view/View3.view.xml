@@ -1,0 +1,33 @@
+<mvc:View controllerName="mcc.project3ui5.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:card="sap.f.cards"
+    xmlns:f="sap.f"
+    xmlns="sap.m">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>titlev3}">
+                    <f:Card class="sapUiMediumMargin" width="400px">
+                        <f:header>
+                            <card:Header title="SCORE CARD" subtitle="Candidate Results" />
+                        </f:header>
+                        <f:content>
+                            <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                                    <Label text="NAME:" labelFor="TXT1"/>
+                                    <Text id="TXT1" text="{paramModel>/personName}" />
+                                    <Label text="EXPERIENCE:" labelFor="TXT2"/>
+                                    <Text id="TXT2" text="{paramModel>/experience}" />
+                                    <Image src="{paramModel>/image}" densityAware="true" width="50px" height="50px">
+                                    </Image>
+                                    <Label text="SCORE:" labelFor="TXT3"/>
+                                    <Text id="TXT3" text="{paramModel>/score}" />
+                                </VBox>
+                            </HBox>
+                        </f:content>
+                    </f:Card>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

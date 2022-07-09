@@ -1,0 +1,45 @@
+<mvc:View controllerName="mcc.project3ui5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>titlev1}">
+                    <content>
+                        <layout:VerticalLayout class="sapUiContentPadding" width="100%">
+
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Text renderWhitespace="true" width="100px" text="{i18n>date}"/>
+                                <DatePicker id="DP1" placeholder="{i18n>datePH}" width="180PX" change="handleChangeDate"/>
+                            </FlexBox>
+
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Text renderWhitespace="true" width="100px" text="{i18n>personName}"/>
+                                <Input id="IN1" value="{paramModel>/personName}" width="300px" placeholder="{i18n>personNamePH}" liveChange="onValidateV1" required="true"/>
+                            </FlexBox>
+
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Text renderWhitespace="true" width="100px" text="{i18n>studies}"/>
+                                <TextArea id="TXTA1" value="{paramModel>/studies}" valueLiveUpdate="true" liveChange="onValidateV1" width="200%" maxLength="150" showExceededText="true" required="true"/>
+                            </FlexBox>
+
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Text renderWhitespace="true" width="100px" text="{i18n>experience}"/>
+                                <Input id="IN2" value="{paramModel>/experience}" width="150px" placeholder="{i18n>experiencePH}" required="true" type="Number" liveChange="onValidateV1"/>
+                                <RadioButtonGroup id="RBG1" valueState="Information" select="onSelectRGB1">
+                                    <RadioButton id="RB1" text="Months" selected="true" />
+                                    <RadioButton id="RB2" text="Years" />
+                                </RadioButtonGroup>
+                            </FlexBox>
+
+                            <Button id="BT1" text="{i18n>continue}" press="navigateToView2" enabled="false" type="Emphasized"/>
+
+                        </layout:VerticalLayout>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

@@ -1,0 +1,35 @@
+<mvc:View controllerName="mcc.project3ui5.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>titlev2}">
+                    <content>
+                        <layout:VerticalLayout class="sapUiContentPadding" width="100%">
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Label text="{i18n>RT1}" labelFor="RI1"/>
+                                <RatingIndicator id="RI1" maxValue="5" class="sapUiSmallMarginBottom" value="{paramModel>/dictionarySkill}" />
+                            </FlexBox>
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Label text="{i18n>RT2}" labelFor="RI2"/>
+                                <RatingIndicator id="RI2" maxValue="5" class="sapUiSmallMarginBottom" value="{paramModel>/ALVSkill}" />
+                            </FlexBox>
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Label text="{i18n>RT3}" labelFor="RI3"/>
+                                <RatingIndicator id="RI3" maxValue="5" class="sapUiSmallMarginBottom" value="{paramModel>/ABAPOOSkill}" />
+                            </FlexBox>
+                            <FlexBox class="sapUiTinyMarginBeginEnd" alignItems="Center" justifyContent="Start">
+                                <Label text="{i18n>RT4}" labelFor="RI4"/>
+                                <RatingIndicator id="RI4" maxValue="5" class="sapUiSmallMarginBottom" value="{paramModel>/DynproSkill}" />
+                            </FlexBox>
+                            <Button text="{i18n>getScore}" press="navigateToView3" width="150px"/>
+                        </layout:VerticalLayout>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
